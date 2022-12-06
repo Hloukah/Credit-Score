@@ -5,7 +5,7 @@ import streamlit as st
 st.write("""
 # Simple stock price app
          
-Shown are the stock closing price and volume of Google
+Shown are the stock closing price and volume of Google bla bla
 """)
 
 """#Define stock
