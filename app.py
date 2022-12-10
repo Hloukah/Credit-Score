@@ -18,7 +18,7 @@ import pickle
 
 # loading the saved model
 loaded_model = pickle.load(
-    open('C:/Users/hlouk/OpenClassroom/P7/LGBMClassifier.pkl', rb))
+    open('C:/Users/hlouk/OpenClassroom/P7/LGBMClassifier.pkl', 'rb')
 
 plt.style.use('fivethirtyeight')
 # sns.set_style(''darkgrid')
