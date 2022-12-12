@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
 import pickle
+import shap
 
 plt.style.use('fivethirtyeight')
 
