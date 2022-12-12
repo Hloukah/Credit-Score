@@ -17,7 +17,8 @@ import streamlit as st
 import pickle
 
 # loading the saved model
-loaded_model = pickle.load(open('C:/Users/hlouk/OpenClassroom/P7/LGBMClassifier.pkl', 'rb'))
+#loaded_model = pickle.load(open('C:/Users/hlouk/OpenClassroom/P7/LGBMClassifier.pkl', 'rb'))
+loaded_model = pickle.load(open('LGBMClassifier.pkl', 'rb'))
 
 plt.style.use('fivethirtyeight')
 
