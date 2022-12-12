@@ -25,7 +25,8 @@ plt.style.use('fivethirtyeight')
 def main():
       @st.cache
       def load_data():
-         data = pd.read_csv(open('application_train.csv'),
+         z = ZipFile("application_train.zip")
+         data = pd.read_csv(z.open('application_train.csv'),
                             index_col='SK_ID_CURR', encoding ='utf-8')
 
          z = ZipFile("X_sample.zip")
