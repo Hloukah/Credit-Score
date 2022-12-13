@@ -14,6 +14,7 @@ import pandas as pd
 import streamlit as st
 import pickle
 import shap
+import plotly.graph_objects as go
 
 plt.style.use('fivethirtyeight')
 
@@ -232,6 +233,19 @@ def main():
      prediction = load_prediction(sample, chk_id, clf)
      st.write("**Default probability : **{:.0f} %".format(round(float(prediction)*100, 2)))
 
+     fig2 = go.Figure(go.Indicator(
+         mode = "gauge+number", 
+         value = round(float(prediction)*100,2),
+         domain = {'x': [0, 1], 'y': [0, 1]},
+         title = { 'text': "Default probability scale"},
+         gauge = {'axis': {'range': [None, 100]}, 
+                  'steps' : [
+                     {'range': [0,20], 'color': "white"},
+                     {'range': [20,40], 'color': "yellow"},
+                     {'range': [40,100], 'color': "red"}]
+                 }))
+
+     st.plotly_chart(fig2)
         # Compute decision according to the best threshold
         # if prediction <= xx :
         #    decision = "<font color='green'>**LOAN GRANTED**</font>"
